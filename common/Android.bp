@@ -1,0 +1,95 @@
+soong_namespace {
+}
+
+android_app_import {
+    name: "GoogleServicesFramework",
+    owner: "gapps",
+    apk: "proprietary/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "default-permissions-google.xml",
+    src: "proprietary/product/etc/default-permissions/default-permissions-google.xml",
+    relative_install_path: "default-permissions",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "gapps.rc",
+    src: "proprietary/product/etc/init/gapps.rc",
+    relative_install_path: "init",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "gms_fsverity_cert.der",
+    src: "proprietary/product/etc/security/fsverity/gms_fsverity_cert.der",
+    relative_install_path: "security/fsverity",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "google-hiddenapi-package-allowlist.xml",
+    src: "proprietary/product/etc/sysconfig/google-hiddenapi-package-allowlist.xml",
+    relative_install_path: "sysconfig",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "google.xml",
+    src: "proprietary/product/etc/sysconfig/google.xml",
+    relative_install_path: "sysconfig",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-google-product.xml",
+    src: "proprietary/product/etc/permissions/privapp-permissions-google-product.xml",
+    relative_install_path: "permissions",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-google-system_ext.xml",
+    src: "proprietary/system_ext/etc/permissions/privapp-permissions-google-system_ext.xml",
+    relative_install_path: "permissions",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.google.android.gms.xml",
+    src: "proprietary/product/etc/permissions/com.google.android.gms.xml",
+    relative_install_path: "permissions",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.android.vending.xml",
+    src: "proprietary/product/etc/permissions/com.android.vending.xml",
+    relative_install_path: "permissions",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.google.android.gsf.xml",
+    src: "proprietary/product/etc/permissions/com.google.android.gsf.xml",
+    relative_install_path: "permissions",
+    filename_from_src: true,
+    product_specific: true,
+}
